@@ -1,3 +1,3 @@
 [submodule "deno-server-demo"]
 	path = deno-server-demo
-	url = https://github.com/fatjyc/deno-server-demo.git
+	url = ../deno-server-demo.git
