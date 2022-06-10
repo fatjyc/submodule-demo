@@ -1,3 +1,6 @@
 [submodule "deno-server-demo"]
 	path = deno-server-demo
 	url = ../deno-server-demo.git
+[submodule "push-gcr-action"]
+	path = push-gcr-action
+	url = ../push-gcr-action.git
