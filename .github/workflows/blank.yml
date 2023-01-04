@@ -38,8 +38,7 @@ jobs:
           echo test, and deploy your project.
           ls -al
           cd deno-server-demo
-          ls -al
-          docker run --rm -t -v $PWD:/workdir jetbrains/intellij-http-client -e test -v http-client.env.json -L VERBOSE -r test.http
+          ./test.sh
           ls -al reports
 
 
@@ -48,5 +47,5 @@ jobs:
         if: success() || failure()
         with:
           name: Unit Tests
-          path: reports/results.xml
+          path: deno-server-demo/reports/results.xml
           reporter: java-junit
