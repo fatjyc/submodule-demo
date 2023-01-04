@@ -39,7 +39,7 @@ jobs:
           ls -al
           cd deno-server-demo
           ls -al
-          docker run --rm -i -t -v $PWD:/workdir jetbrains/intellij-http-client -e test -v http-client.env.json -L VERBOSE -r test.http
+          docker run --rm -t -v $PWD:/workdir jetbrains/intellij-http-client -e test -v http-client.env.json -L VERBOSE -r test.http
           ls -al reports
 
 
