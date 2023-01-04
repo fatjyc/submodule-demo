@@ -39,7 +39,7 @@ jobs:
           ls -al
           cd deno-server-demo
           ./test.sh
-          ls -al reports
+          ls -al deno-server-demo/reports
 
 
       - name: Test Report
