@@ -39,3 +39,14 @@ jobs:
           ls -al
           cd deno-server-demo
           ls -al
+          docker run --rm -i -t -v $PWD:/workdir jetbrains/intellij-http-client -e test -v http-client.env.json -L VERBOSE -r test.http
+          ls -al reports
+
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Unit Tests
+          path: reports/results.xml
+          reporter: java-junit
