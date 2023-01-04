@@ -40,5 +40,16 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          cd deno-server-demo
+          ./test.sh
+
+
+      - name: Test Report 222
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: HTTP Test Report 222
+          path: deno-server-demo/reports/report.xml
+          reporter: java-junit
