@@ -47,5 +47,5 @@ jobs:
         if: success() || failure()
         with:
           name: Unit Tests
-          path: deno-server-demo/reports/results.xml
+          path: deno-server-demo/reports/report.xml
           reporter: java-junit
