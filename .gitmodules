@@ -4,3 +4,6 @@
 [submodule "push-gcr-action"]
 	path = push-gcr-action
 	url = ../push-gcr-action.git
+[submodule "test-repo"]
+	path = test-repo
+	url = ../test-repo.git
